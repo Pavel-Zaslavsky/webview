@@ -1,0 +1,143 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>My app</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+  <!--
+
+   заполнять в соотвествии с контентом, который предполагается шарить
+
+  <meta name="title" content="Так я реагирую, когда говорят &quot;efsdf&quot;!">
+  <meta name="description" content="Думаешь, твоя реакция будет круче? Создай свой коллаж и проверим!">
+  <meta name="og:type" content="website">
+  <meta name="og:url" content="https://feelslike.photolab.me/r/JmmM">
+  <meta name="og:title" content="Так я реагирую, когда говорят &quot;efsdf&quot;!">
+  <meta name="og:description" content="Думаешь, твоя реакция будет круче? Создай свой коллаж и проверим!">
+  <meta name="og:image" content="http://feelslike-images.ws.pho.to.s3.amazonaws.com/rfb/14d8905820297f7.jpg">
+  <meta name="og:video" content="">
+  <meta name="og:image:type" content="image/jpeg">
+  <meta name="og:image:width" content="1000">
+  <meta name="og:image:height" content="500">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Так я реагирую, когда говорят &quot;efsdf&quot;!">
+  <meta name="twitter:description" content="Думаешь, твоя реакция будет круче? Создай свой коллаж и проверим!">
+  <meta name="twitter:image" content="http://feelslike-images.ws.pho.to.s3.amazonaws.com/rfb/14d8905820297f7.jpg">
+  <meta name="twitter:player" content="">
+  <meta name="twitter:player:stream" content="">
+  <meta name="twitter:player:stream:content_type" content="">
+
+   заполнять в соотвествии с контентом, который предполагается шарить
+
+  -->
+  <link rel="apple-touch-icon" sizes="60x60" href="images/favicons/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="images/favicons/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="images/favicons/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="images/favicons/apple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/favicons/apple-touch-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicons/favicon-16x16.png">
+  <link rel="manifest" href="manifest.json">
+  <link rel="mask-icon" href="images/favicons/safari-pinned-tab.svg" color="#9726b2">
+
+  <meta name="msapplication-TileColor" content="#603cba">
+  <meta name="msapplication-TileImage" content="images/favicons/mstile-144x144.png">
+  <meta name="theme-color" content="#6c40be">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <style>
+    *{
+      user-select: none;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <div class="row">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <span class="navbar-brand">
+            <i class="glyphicon glyphicon-star-empty"></i>
+            My awesome app!
+            <i class="glyphicon glyphicon-star-empty"></i>
+          </span>
+        </nav>
+      </div>
+    </div>
+  </header>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h1>hello world!</h1>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <img src="https://via.placeholder.com/400x300?text=THUMBNAIL" class="img-thumbnail img-responsive" alt="Responsive image">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <h2>actions</h2>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <a href="callback:nativePhotoSelect?func=appUploaded" class="btn btn-success">
+          <i class="glyphicon glyphicon-upload"></i>
+          Choose photo
+        </a>
+        <a href="callback:nativeFacebookPerms?perms=user_friends,user_photos,user_birthday&func=appPerms" class="btn btn-primary">
+          <i class="glyphicon glyphicon-cog"></i>
+          Facebook permissions
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Modal : start -->
+  <div class="modal fade" id="js-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel">popup</h4>
+        </div>
+        <div class="modal-body" id="js-modal-text">
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Discard</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal : end -->
+
+  <script src="js/jquery.2.2.4.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+
+  <script>
+    function appUploaded() {
+      $('#js-modal-text').text('fake uploaded successful. run fake processing with redirect to result page');
+      $('#js-modal').modal();
+      setTimeout(function() {
+        $('#js-modal').modal();
+        window.location.href = 'http://' + window.location.host + '/webview/result.html';
+      }, 5000)
+    }
+
+    function appPerms() {
+      //working with permissions
+    }
+  </script>
+</body>
+
+</html>

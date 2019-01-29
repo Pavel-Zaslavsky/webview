@@ -1,0 +1,114 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>My app</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+  <!--
+
+   заполнять в соотвествии с контентом, который предполагается шарить
+
+  <meta name="title" content="Так я реагирую, когда говорят &quot;efsdf&quot;!">
+  <meta name="description" content="Думаешь, твоя реакция будет круче? Создай свой коллаж и проверим!">
+  <meta name="og:type" content="website">
+  <meta name="og:url" content="https://feelslike.photolab.me/r/JmmM">
+  <meta name="og:title" content="Так я реагирую, когда говорят &quot;efsdf&quot;!">
+  <meta name="og:description" content="Думаешь, твоя реакция будет круче? Создай свой коллаж и проверим!">
+  <meta name="og:image" content="http://feelslike-images.ws.pho.to.s3.amazonaws.com/rfb/14d8905820297f7.jpg">
+  <meta name="og:video" content="">
+  <meta name="og:image:type" content="image/jpeg">
+  <meta name="og:image:width" content="1000">
+  <meta name="og:image:height" content="500">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Так я реагирую, когда говорят &quot;efsdf&quot;!">
+  <meta name="twitter:description" content="Думаешь, твоя реакция будет круче? Создай свой коллаж и проверим!">
+  <meta name="twitter:image" content="http://feelslike-images.ws.pho.to.s3.amazonaws.com/rfb/14d8905820297f7.jpg">
+  <meta name="twitter:player" content="">
+  <meta name="twitter:player:stream" content="">
+  <meta name="twitter:player:stream:content_type" content="">
+
+   заполнять в соотвествии с контентом, который предполагается шарить
+
+  -->
+  <link rel="apple-touch-icon" sizes="60x60" href="images/favicons/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="images/favicons/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="images/favicons/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="images/favicons/apple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/favicons/apple-touch-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicons/favicon-16x16.png">
+  <link rel="manifest" href="manifest.json">
+  <link rel="mask-icon" href="images/favicons/safari-pinned-tab.svg" color="#9726b2">
+
+  <meta name="msapplication-TileColor" content="#603cba">
+  <meta name="msapplication-TileImage" content="images/favicons/mstile-144x144.png">
+  <meta name="theme-color" content="#6c40be">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <style>
+    *{
+      user-select: none;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <div class="row">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <span class="navbar-brand">
+            <i class="glyphicon glyphicon-star-empty"></i>
+            My awesome app!
+            <i class="glyphicon glyphicon-star-empty"></i>
+          </span>
+        </nav>
+      </div>
+    </div>
+  </header>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <button id="js-back" class="btn btn-default">
+          <i class="glyphicon glyphicon-chevron-left"></i>
+          go back
+        </button>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <h1>Result:</h1>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <img src="https://via.placeholder.com/400x300?text=Awesome!!!" class="img-thumbnail img-responsive" alt="Responsive image">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <h2>Share your result with friends</h2>
+        <a href="callback:nativeShare?og_image=https://bipbap.ru/wp-content/uploads/2017/04/priroda_kartinki_foto_03.jpg&og_title=Мега%20Фото&og_d
+escription=Расшарьте%20пожалуйста%21&func=appShare" class="btn btn-primary">
+          <i class="glyphicon glyphicon-share"></i>
+          Share
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="js/jquery.2.2.4.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script>
+    $('#js-back').click(function() {
+      window.location.href = 'http://' + window.location.host + '/webview/';
+    });
+  </script>
+</body>
+
+</html>
